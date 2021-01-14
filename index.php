@@ -286,8 +286,48 @@ require_once('dbsupport.php')
                 </p>
               </i>
             </div>
+ <!-- starting php code -->
+ <?php
+                    //first we leave this input field blank
+                    $recipient = "";
+                    //if user click the send button
+                    if(isset($_POST['send'])){
+                        //access user entered data
+                       $recipient = $_POST['email'];
+                       $subject = $_POST['subject'];
+                       $message = $_POST['message'];
+                       $sender = "From: xuanquy1120@gmail.com";
+                       //if user leave empty field among one of them
+                       if(empty($recipient) || empty($subject) || empty($message)){
+                           ?>
+                           <!-- display an alert message if one of them field is empty -->
+                            <div class="alert alert-danger text-center">
+                                <?php echo "All inputs are required!" ?>
+                            </div>
+<?php
+                        }else{
+                            // PHP function to send mail
+                           if(mail($recipient, $subject, $message, $sender)){
+                            ?>
+                            <!-- display a success message if once mail sent sucessfully -->
+                            <div class="alert alert-success text-center">
+                                <?php echo "Your mail successfully sent to $recipient"?>
+                            </div>
+<?php
+                           $recipient = "";
+                           }else{
+                            ?>
+                            <!-- display an alert message if somehow mail can't be sent -->
+                            <div class="alert alert-danger text-center">
+                                <?php echo "Failed while sending your mail!" ?>
+                            </div>
+<?php
+                           }
+                       }
+                    }
+                ?> <!-- end of php code -->
             <div class="col-md-8" data-aos="fade-left">
-              <form id="contact-form" class="contact-form mt-6">
+              <form id="contact-form" class="contact-form mt-6" action="index.php" method="post"> 
 						
                 <div class="row">
                   <div class="column col-md-6">
@@ -301,7 +341,7 @@ require_once('dbsupport.php')
                   <div class="column col-md-6">
                     <!-- Email input -->
                     <div class="form-group">
-                      <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Địa chỉ Email" required="required" data-error="Email is required.">
+                      <input type="email" class="form-control" id="InputEmail" name="email" placeholder="Địa chỉ Email" required="required" data-error="Email is required." value="<?php echo $recipient ?>">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
@@ -309,7 +349,7 @@ require_once('dbsupport.php')
                   <div class="column col-md-12">
                     <!-- Email input -->
                     <div class="form-group">
-                      <input type="text" class="form-control" id="InputSubject" name="InputSubject" placeholder="Tiêu đề" required="required" data-error="Subject is required.">
+                      <input type="text" class="form-control" id="InputSubject" name="subject" placeholder="Tiêu đề" required="required" data-error="Subject is required.">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
@@ -317,13 +357,13 @@ require_once('dbsupport.php')
                   <div class="column col-md-12">
                     <!-- Message textarea -->
                     <div class="form-group">
-                      <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" placeholder="Nội dung" required="required" data-error="Message is required."></textarea>
+                      <textarea name="message" id="InputMessage" class="form-control" rows="5" placeholder="Nội dung" required="required" data-error="Message is required."></textarea>
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                 </div>
         
-                <button type="submit" name="submit" id="submit" value="Submit" class="btn btn-primary" >Gửi tin nhắn</button><!-- Send Button -->
+                <button type="submit" name="send" id="submit" value="Submit" class="btn btn-primary" >Gửi tin nhắn</button><!-- Send Button -->
         
               </form>
             </div>
