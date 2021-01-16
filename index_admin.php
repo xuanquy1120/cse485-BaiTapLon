@@ -55,8 +55,8 @@ require_once('dbsupport.php')
         $sql_education = 'select * from giaoduc where id="1"';
         $list_education=  executeresult_education($sql_education);
         // sql img
-        $sql_img = 'select * from hinhanh where id="1"';
-        $list_img=  executeresult_img($sql_img);
+         $sql_img = 'select * from hinhanh where id="1"';
+         $list_img=  executeresult_img($sql_img);
         ?>   
 
     <!-- header -->
@@ -70,7 +70,6 @@ require_once('dbsupport.php')
              echo "<img src='./img/".$lists['anhphu']."' >";
          }
         ?>
-
 
           <?php foreach($list_information as $lists)
             {
@@ -124,7 +123,10 @@ require_once('dbsupport.php')
                 <a class="nav-link" href="#contact">Liên Hệ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login.php">Đăng nhập</a>
+                <a class="nav-link" href="index.php">Đăng xuất</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="edit/information.php">Chỉnh sửa</a>
               </li>
             </ul>
           </div>
@@ -350,7 +352,7 @@ require_once('dbsupport.php')
 
                 ?> <!-- end of php code -->
             <div class="col-md-8" data-aos="fade-left">
-              <form id="contact-form" class="contact-form mt-6" action="index_user.php" method="post"> 
+              <form id="contact-form" class="contact-form mt-6" action="index_admin.php" method="post"> 
 						
                 <div class="row">
                   <div class="column col-md-6">

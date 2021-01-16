@@ -69,4 +69,16 @@ function executeresult_education($sql_education){
     mysqli_close($conn);
     return $list;
 }
+// sql img
+function executeresult_img($sql_img){
+    $conn = mysqli_connect(Host, Username, Password, database);
+
+    $resultset = mysqli_query($conn, $sql_img);
+    $list =[];
+    while($row = mysqli_fetch_array($resultset, 1)){
+        $list[] = $row;
+    }
+    mysqli_close($conn);
+    return $list;
+}
 ?>

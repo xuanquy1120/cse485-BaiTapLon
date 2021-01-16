@@ -44,6 +44,7 @@ body {
   border: 2px solid #fff;
   font-size: 10px;
   border-radius: 30px;
+
 }
 .scroll-bar {
   animation: mover 1s infinite alternate;
