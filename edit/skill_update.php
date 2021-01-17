@@ -74,9 +74,8 @@ if(isset($_GET['id'])){
             <label for="Salary">Mức độ</label>
             <input type="number" name="mucdo" id="mucdo" class="form-control" value=<?=$mucdo?> >
         </div>
-        <div class="row" >
-            <button class="btn btn-success">Lưu lại</button>
-        </div>
+        <button class="btn btn-success">Lưu lại</button>
+            <a class="btn btn-success" href="skill.php">Quay lại</a>
          
     </form>
     

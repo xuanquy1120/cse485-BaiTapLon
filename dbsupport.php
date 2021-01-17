@@ -81,4 +81,16 @@ function executeresult_img($sql_img){
     mysqli_close($conn);
     return $list;
 }
+// sql admin
+function executeresult_admin($sql_admin){
+    $conn = mysqli_connect(Host, Username, Password, database);
+
+    $resultset = mysqli_query($conn, $sql_admin);
+    $list =[];
+    while($row = mysqli_fetch_array($resultset, 1)){
+        $list[] = $row;
+    }
+    mysqli_close($conn);
+    return $list;
+}
 ?>

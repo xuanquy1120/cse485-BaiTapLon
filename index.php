@@ -118,7 +118,7 @@ require_once('dbsupport.php')
                 <a class="nav-link" href="#about">Giới Thiệu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#resume">Tiểu Sử</a>
+                <a class="nav-link" href="#resume">Tóm tắt</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#contact">Liên Hệ</a>

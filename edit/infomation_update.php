@@ -133,9 +133,8 @@ if(isset($_GET['id'])){
             <label for="Salary">Mô tả</label>
             <input type="text" name="mota" id="mota" class="form-control" value="<?=$mota?> " >
         </div>
-        <div class="row" >
-            <button class="btn btn-success">Lưu lại</button>
-        </div>
+        <button class="btn btn-success">Lưu lại</button>
+            <a class="btn btn-success" href="information.php">Quay lại</a>
             
     </form>
     
