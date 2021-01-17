@@ -41,7 +41,7 @@ require_once('../dbsupport.php');
   foreach($list_interests as $lists)
   {
     echo'<tr>
-            <td >'.$lists['id'].'</td>
+            <td >'.$lists['id_kkd'].'</td>
             <td >'.$lists['ten'].'</td>
             <td >'.$lists['mucdo'].'%</td>
             <td><a href="skill_update.php?id='.$lists['id_kkd'].'"<i class="far fa-edit"></i></a></td>

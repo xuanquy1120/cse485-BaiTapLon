@@ -44,7 +44,7 @@ require_once('../dbsupport.php');
   foreach($list_information as $lists)
   {
     echo'<tr>
-            <td >'.$lists['id'].'</td>
+            <td >'.$lists['id_tt'].'</td>
             <td >'.$lists['ten'].'</td>
             <td >'.$lists['sodt'].'</td>
             <td >'.$lists['email'].'</td>

@@ -43,7 +43,7 @@ require_once('../dbsupport.php');
   foreach($list_education as $lists)
   {
     echo'<tr>
-            <td >'.$lists['id'].'</td>
+            <td >'.$lists['id_gd'].'</td>
             <td >'.$lists['ten'].'</td>
             <td >'.$lists['nam'].'</td>
             <td><a href="education_read.php?id='.$lists['id_gd'].'"<i class="fas fa-eye"></i></a></td>

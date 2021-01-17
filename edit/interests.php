@@ -42,7 +42,7 @@ require_once('../dbsupport.php');
   foreach($list_interests as $lists)
   {
     echo'<tr>
-            <td >'.$lists['id'].'</td>
+            <td >'.$lists['id_st'].'</td>
             <td >'.$lists['ten'].'</td>
             <td><a href="interests_read.php?id='.$lists['id_st'].'"<i class="fas fa-eye"></i></a></td>
             <td><a href="interests_update.php?id='.$lists['id_st'].'"<i class="far fa-edit"></i></a></td>
