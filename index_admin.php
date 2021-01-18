@@ -1,6 +1,11 @@
 <?php 
 require_once('dbsupport.php')
 ?>
+<?php
+session_start();
+if (isset($_SESSION['id']) && isset($_SESSION['tentk'])) {
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -123,7 +128,7 @@ require_once('dbsupport.php')
                 <a class="nav-link" href="#contact">Liên Hệ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.php">Đăng xuất</a>
+                <a class="nav-link"  href="logout.php">Đăng xuất</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="edit/information.php">Chỉnh sửa</a>
@@ -442,3 +447,9 @@ require_once('dbsupport.php')
     ></script>
   </body>
 </html>
+<?php 
+}else{
+     header("Location: index.php");
+     exit();
+}
+ ?>
