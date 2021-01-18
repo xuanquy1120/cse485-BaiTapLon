@@ -350,7 +350,7 @@ require_once('dbsupport.php')
 
                 ?> <!-- end of php code -->
             <div class="col-md-8" data-aos="fade-left">
-              <form id="contact-form" class="contact-form mt-6" action="index_user.php" method="post"> 
+              <form id="contact-form" class="contact-form mt-6" action="index.php" method="post"> 
 						
                 <div class="row">
                   <div class="column col-md-6">
