@@ -449,7 +449,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['tentk'])) {
 </html>
 <?php 
 }else{
-     header("Location: index.php");
+     header("Location: indexLogin.php");
      exit();
 }
  ?>
