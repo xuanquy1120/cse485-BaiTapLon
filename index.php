@@ -329,7 +329,7 @@ require_once('dbsupport.php')
                             $mail->Username   = $mFrom;  // khai bao dia chi email
                             $mail->Password   = $mPass;              // khai bao mat khau
                             $mail->SetFrom($mFrom, $nFrom);
-                            $mail->AddReplyTo('xuanquy1120@gmail.com', 'Freetuts.net'); //khi nguoi dung phan hoi se duoc gui den email nay
+                            $mail->AddReplyTo( $lists['email'], 'Freetuts.net'); //khi nguoi dung phan hoi se duoc gui den email nay
                             $mail->Subject    = $title;// tieu de email 
                             $mail->MsgHTML($body);// noi dung chinh cua mail se nam o day.
                             $mail->AddAddress($mTo, $nTo);
